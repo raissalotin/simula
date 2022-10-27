@@ -11,9 +11,21 @@
     let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
 
     //PROCESSAMENTO
-
+let tecnico = []
+let ficcao = []
+ 
+for (let livros of listaLivros){
+    let genero = prompt(`o livro ${livros} é tecnico (t) ou de ficção (f)?)`).toUpperCase();
+    if (genero === "t"){
+        tecnico.push(livros);
+    }
+    else{
+        ficcao.push(livros)
+    }
+}
 
     //SAÍDA
-
+document.write(`tem ${tecnico.length} livros tecnicos : ${tecnico.join(", ")}</br>`)
+document.write(`tem ${ficcao.length} livros de ficcao:${ficcao.join(", ")} `)
 
 </script>
